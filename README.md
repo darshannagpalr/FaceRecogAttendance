@@ -194,3 +194,24 @@ After adding new faces or modifying the `dataset` directory (e.g., adding images
     └── trainer
         ├── labels.json
         └── trainer.yml
+
+## Important Notes
+
+* **Security:** This is a basic demonstration. For production environments, consider robust security measures, including secure credential management, proper authentication, and error handling.
+* **Accuracy:** Face recognition accuracy depends heavily on the quality and quantity of training data. Capture clear images with varied lighting, expressions, and angles.
+* **Performance:** The recognition performance can vary based on your system's hardware and webcam quality.
+* **Haar Cascade:** Ensure the `haarcascade_frontalface_default.xml` file is in the root directory of your project.
+
+## Future Enhancements
+
+* **Automated Image Capture:** Implement a feature to automatically capture a set number of images for a new person (e.g., "capture 20 images in 5 seconds").
+* **Real-time Feedback during Capture:** Provide real-time feedback (e.g., "face detected", "image saved") on the `add_face` page.
+* **User Management:** Implement user authentication for accessing the web interface.
+* **Advanced Recognition Models:** Integrate more advanced deep learning models (e.g., FaceNet, ArcFace) for higher accuracy.
+* **Logging Out:** Add functionality to mark users as "logged out" from the database.
+* **Attendance Reports:** Generate reports based on login history.
+* **Dockerization:** Provide Dockerfiles for easy deployment.
+
+## License
+
+This project is open-source and available under the MIT License. See the `LICENSE` file for more details.
