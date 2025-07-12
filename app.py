@@ -861,4 +861,4 @@ def video_feed():
 
 if __name__ == "__main__":
     setup_database()  # Ensure DB table is set up on startup
-    app.run(debug=True)  # Run Flask in debug mode for development
+    app.run(host='0.0.0.0',port=5000,debug=True)  # Run Flask in debug mode for development
