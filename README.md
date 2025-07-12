@@ -215,4 +215,4 @@ After adding new faces or modifying the `dataset` directory (e.g., adding images
 
 ## License
 
-This project is open-source and available under the MIT License. See the `LICENSE` file for more details.
+This project is open-source and available under the MIT License. click the [`LICENSE`](https://github.com/darshannagpalr/FaceRecogAttendance/blob/main/LICENSE) file for more details.
