@@ -194,6 +194,7 @@ After adding new faces or modifying the `dataset` directory (e.g., adding images
     └── trainer
         ├── labels.json
         └── trainer.yml
+```
 
 ## Important Notes
 
