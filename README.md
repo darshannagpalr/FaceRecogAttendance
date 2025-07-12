@@ -11,7 +11,7 @@ A web-based face recognition and attendance/login system built with Flask, OpenC
 -   [Database Setup](#database-setup)
 -   [Running the Application](#running-the-application)
 -   [Usage Guide](#usage-guide)
-    -   [Adding New Faces](#adding-new-faces)
+    -   [Adding New Faces](#adding-new-faces-add_face)
     -   [Training the Model](#training-the-model)
     -   [Starting/Stopping Face Recognition](#startingstopping-face-recognition)
     -   [Viewing Login History](#viewing-login-history)
