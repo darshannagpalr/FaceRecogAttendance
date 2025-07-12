@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Live Recognition Stream{% endblock %}
+
+{% block content %}
+    <h2>Live Face Recognition</h2>
+    <p>Testing Jinja2 rendering: The year should be: {{ current_year }}</p> {# ADD THIS LINE #}
+
+    <div class="recognition-controls">
+        <button id="startRecognitionBtn" class="button button-primary">Start Recognition</button>
+        <button id="stopRecognitionBtn" class="button button-danger">Stop Recognition</button>
+    </div>
+
+    <p id="recognitionStatus"></p>
+
+    <div class="video-container">
+        <img id="videoFeed" src="{{ url_for('video_feed') }}" width="640" height="480" alt="Video Feed" style="display: none;">
+        <p id="loadingMessage">Waiting for recognition to start...</p>
+    </div>
+
+    <p>Note: The stream might take a moment to start/stop. The `video_feed` URL is live only when recognition is active.</p>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Login History{% endblock %}
+
+{% block content %}
+    <h2>Login History</h2>
+
+    {% if records %}
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Login Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in records %}
+                <tr>
+                    <td>{{ record.id }}</td>
+                    <td>{{ record.name }}</td>
+                    <td>{{ record.login_time }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No login records found yet.</p>
+    {% endif %}
+{% endblock %}

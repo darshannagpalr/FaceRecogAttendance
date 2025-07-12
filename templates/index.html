@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <h2>Admin Dashboard</h2>
+    <p>Welcome to the Face Recognition Admin Panel.</p>
+
+    <div class="card-container">
+        <div class="card">
+            <h3>Add New Faces</h3>
+            <p>Register new individuals by providing their name and adding their face images to the 'dataset' folder.</p>
+            <a href="{{ url_for('add_face') }}" class="button">Go to Add Face</a>
+        </div>
+
+        <div class="card">
+            <h3>Train Recognition Model</h3>
+            <p>After adding new faces, train the model to recognize them. This may take a few seconds.</p>
+            <button id="trainModelBtn" class="button button-primary">Train Model Now</button>
+            <p id="trainMessage"></p>
+        </div>
+
+        <div class="card">
+            <h3>View Login History</h3>
+            <p>See a log of all recognized individuals and their login times.</p>
+            <a href="{{ url_for('login_history') }}" class="button">View History</a>
+        </div>
+
+        <div class="card">
+            <h3>Live Face Recognition</h3>
+            <p>Start and stop the real-time face recognition process via webcam.</p>
+            <a href="{{ url_for('recognition_stream_page') }}" class="button">Go to Live Recognition</a>
+        </div>
+    </div>
+
+{% endblock %}

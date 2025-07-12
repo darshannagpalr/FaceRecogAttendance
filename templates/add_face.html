@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Add Face{% endblock %}
+
+{% block content %}
+    <h2>Add New Face</h2>
+    <p>Enter the name of the person you want to add. A folder will be created for them in the 'dataset' directory.
+        You then need to manually place their face images (e.g., JPG, PNG) into that new folder
+        (e.g., `dataset/John_Doe/`).</p>
+    <p>After adding images, remember to click the "Train Model Now" button on the Dashboard!</p>
+
+    <form method="POST">
+        <label for="person_name">Person's Name:</label>
+        <input type="text" id="person_name" name="person_name" required>
+        <button type="submit" class="button button-success">Create Folder</button>
+    </form>
+
+    {% if message %}
+        <p class="message">{{ message }}</p>
+    {% endif %}
+
+    <div class="note">
+        <h3>Future Enhancement: Live Image Capture</h3>
+        <p>In a more complete system, this page would allow you to capture images directly from the webcam for a new person.
+           This feature is not implemented in this basic UI version but is highly recommended for ease of use.</p>
+        <p>Example flow for live capture:</p>
+        <ol>
+            <li>Enter name and click 'Start Capture'.</li>
+            <li>Webcam stream appears.</li>
+            <li>System automatically captures N images of the person's face.</li>
+            <li>Images are saved to `dataset/Person_Name/`.</li>
+        </ol>
+    </div>
+{% endblock %}
